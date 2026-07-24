@@ -1,0 +1,269 @@
+sea_category,sea_category_notes,sea_subcategory,sea_subcategory_kind,sea_subcategory_notes,preceding_instruction,term,notes,example_gene,publications,case_studies,deprecated_synonyms,source_row
+Capsid structure and assembly,,,,,,portal protein,Portal protein is often crystallized in a complex with head-to-tail connector proteins. Make sure HHPred hits to portal are hitting the portal protein chain. There should be only one portal protein gene in a genome.,TM4_5 (K2),,https://seaphagesbioinformatics.helpdocsonline.com/portal-and-head-to-tail-connectors,head to tail connector,4
+Capsid structure and assembly,,,,,,capsid maturation protease,"Sometimes the CMP hits to ClpP proteases. If so, look for a serine-type endopeptidase activity.  A significant hit to the CMP of D29 and L5 is sufficient evidence.","Langerak_4 (P1),  D29_15 (A2)",,,capsid morphogenesis protein,5
+Capsid structure and assembly,,,,,,Capsid maturation protease and VIP2-like ADP-ribosyltransferase toxin,,Adolin_4 (AZ1),,,,6
+Capsid structure and assembly,,,,,,scaffolding protein,,D29_16 (A2),,,Scaffold,7
+Capsid structure and assembly,,,,,,major capsid protein,,Sisi_6 (F1),,,capsid,8
+Capsid structure and assembly,,,,,,major capsid hexamer protein,Based on experimental evidence (see publication),Rosebush_15 (B2),https://pubmed.ncbi.nlm.nih.gov/32182721/,,,9
+Capsid structure and assembly,,,,,,major capsid pentamer protein,Based on experimental evidence (see publication),Rosebush_16 (B2),https://pubmed.ncbi.nlm.nih.gov/32182721/,,,10
+Capsid structure and assembly,,,,,,major capsid and protease fusion protein,"in this case, the scaffolding function is also part of the fusion, but we don't explicitly write it in the function name. Found in clusters AN, AM, AU, BI, DJ, EE, EL","Decurro_7 (AN), BurtonThePup_5 (EE)",,,,11
+Capsid structure and assembly,,,,,,capsid decoration protein,Based on experimental evidence (see publication),"Patience_29 (U), Rosebush_17 (B2)",https://pubmed.ncbi.nlm.nih.gov/32182721/,,head decoration protein,12
+Capsid structure and assembly,,,,,,"capsid decoration protein, LamD-like",Look for the several beta strands and 1-2 alpha helices in HHPred alignments (see PBD 1C5E_B in lambda),Turuncu_32 (CR1),https://www.nature.com/articles/nsb0300_230.pdf,,,13
+Capsid structure and assembly,,,,,,minor capsid protein,Based on experimental evidence (see publication),Patience_22 (U),https://pubmed.ncbi.nlm.nih.gov/32182721/,,,14
+Capsid structure and assembly,,,,,,Hypothetical Protein,"This refers to proteins hitting MuF in HHPred. If there is an HHPred alignment to gp15 of phage D29, consider capsid maturation protease",,,,MuF-like minor capsid protein,15
+Capsid structure and assembly,,,,,,head fiber protein,,Briton15_18 (A1),,,,16
+Head-to-Tail Connector proteins,,,,,,head-to-tail adaptor,Must have an HHPRED alignment to one of the following crystal structures: SPP1 gp15 (PDB 5A21 chain C or D in the macromolecular complex) OR HK97 gp6 OR Bacillus protein yqbG. Hits to PDB 5A21are not as likely to show up as they did when the case study was written.  You can now hit other head-to-tail adaptor calls that were based on these original data.,GageAP_19 (A1),,https://seaphagesbioinformatics.helpdocsonline.com/portal-and-head-to-tail-connectors,head-to-tail connector|head-to-tail connector complex protein,19
+Head-to-Tail Connector proteins,,,,,,head-to-tail stopper,Must have an HHPRED alignment to one of the following crystal structures: SPP1 16 (5A21 chain E or F in the macromolecular complex) or Bacillus protein yqbH Hits to PCB 5A21 are not as likely to show up as they did when the case study was written.  You can now hit other head-to-tail stopper calls that were based on these original data.,GageAP_20 (A1),,https://seaphagesbioinformatics.helpdocsonline.com/portal-and-head-to-tail-connectors,head-to-tail connector|head-to-tail connector complex protein,20
+Head-to-Tail Connector proteins,,,,,,tail terminator,"Must have an HHPRED alignment to one of the following crystal structures: SPP1 gp17 (5A21 chain G in the macromolecular complex) or Lambda U (3FZ2_chains A through F). Hits to are not as likely to show up as they did when the case study was written.  You can now hit other tail terminator calls that were based on these original data. Note: SPP1 17.1 is the major tail subunit, not tail terminator.",GageAP_22 (A1),,https://seaphagesbioinformatics.helpdocsonline.com/portal-and-head-to-tail-connectors,head-to-tail connector|head-to-tail connector complex protein,21
+Tail Structure and assembly,,,,,,tail assembly chaperone,"Please see Phage Genomics Guide, Ch. 9.2, for evidence needed to call TAC",TM4_15 and TM4_16 (K1),,,Tail scaffolding protein,24
+Tail Structure and assembly,,,,,,Hypothetical Protein,do not call TAC when there is no HHPred evidence and translational frameshift is not identified (see Phage Genomics Guide Ch. 9.2),,,,tail assembly chaperone,25
+Tail Structure and assembly,,,,,,tape measure protein,,TM4_17 (K1),,,Tape Measure|tmp|tapemeasure,26
+Tail Structure and assembly,,,,,,minor tail protein,"If you have significant hits to either collagen-like or glycine-rich proteins, and are in the syntenic region of minor tail proteins, you can call them minor tail proteins.","Sisi_15-18 (F1), Nebs_4 (A4)",,,tail fiber-like protein|collagen-like|glycine rich,27
+Tail Structure and assembly,,,,,,"minor tail protein, D-ala-D-ala carboxypeptidase","must include ""minor tail"" as part of the functional assingment",Sisi_19 (F1),,,,28
+Tail Structure and assembly,,,,,,tailspike protein,tailspike has triple beta coils. make sure you are matching the spike part of the protein and not the N-terminal tail tip binding domain.,Flapper_24 (CR1),,,,29
+Tail Structure and assembly,,,,,,Hypothetical Protein,This refers to proteins hitting HK97 gp10 in HHPred. The Hendrix lab (studiers of HK97 and capsid construction) never determined a function for this gene,,,,HK97_gp10,30
+Tail Structure and assembly,,Siphovirus Tail Structures,morphotype,"The structures below were identified in the well-studied siphovirus, Bxb1.  Note, some terms listed here are not unique to siphovirus and may also be found in myoviruses or podoviruses.",For next 6 assignments:,Dit,Aligns with the N-terminal domain of PDB 9D93 (Bxb1 tail tip) chains Ma-Mf.,Violac_gp16 (F1),,,,33
+Tail Structure and assembly,,Siphovirus Tail Structures,morphotype,"The structures below were identified in the well-studied siphovirus, Bxb1.  Note, some terms listed here are not unique to siphovirus and may also be found in myoviruses or podoviruses.",For next 6 assignments:,Dit/tail tip cage,"Aligns with PDB 9D93 (Bxb1 tail tip) chains Ma-Mf. To call a Dit/tail tip cage, you must have an alignment in HHpred to the full-length protein of Bxb1. If your protein only aligns to the N-terminal region of the Bxb1 Dit/tail tip (chain Ma-Mf), consider the function Dit. If your protein only aligns to 2/3 of the C-terminal end of Bxb1 Dit/tail tip (chain Ma-Mf), consider the function tail tip cage.",Bxb1 _gp23 (A1),,,,34
+Tail Structure and assembly,,Siphovirus Tail Structures,morphotype,"The structures below were identified in the well-studied siphovirus, Bxb1.  Note, some terms listed here are not unique to siphovirus and may also be found in myoviruses or podoviruses.",For next 6 assignments:,tail tip cage,"If your protein only aligns to 2/3 of the C-terminal end of Bxb1 Dit/tail tip (chain Ma-Mf), consider the function tail tip cage",Violac_gp18 (F1),,,,35
+Tail Structure and assembly,,Siphovirus Tail Structures,morphotype,"The structures below were identified in the well-studied siphovirus, Bxb1.  Note, some terms listed here are not unique to siphovirus and may also be found in myoviruses or podoviruses.",For next 6 assignments:,baseplate hub,Aligns with PDB 9D93 (Bxb1 tail tip) chains Oa-Oc,Bxb1_gp25 (A1),,,,36
+Tail Structure and assembly,,Siphovirus Tail Structures,morphotype,"The structures below were identified in the well-studied siphovirus, Bxb1.  Note, some terms listed here are not unique to siphovirus and may also be found in myoviruses or podoviruses.",For next 6 assignments:,tail spike,Aligns with PDB 9D93 (Bxb1 tail tip) chains Pa-Pc,Bxb1_gp29 (A1),,,,37
+Tail Structure and assembly,,Siphovirus Tail Structures,morphotype,"The structures below were identified in the well-studied siphovirus, Bxb1.  Note, some terms listed here are not unique to siphovirus and may also be found in myoviruses or podoviruses.",For next 6 assignments:,tail tube,Aligns with PDB 9D93 (Bxb1 tail tip) chains Ja-Jf. OK to call if it aligns with other tail tube or major tail proteins.,Bxb1_gp19 (A1),,,major tail protein,38
+Tail Structure and assembly,,Myovirus Tail Structures,morphotype,,,baseplate J protein,found in myoviral phages,Alice_133 (C1),,,,40
+Tail Structure and assembly,,Myovirus Tail Structures,morphotype,,,tail tube,found in myoviral phages,RosiePosie_19 (AR),,,,41
+Tail Structure and assembly,,Myovirus Tail Structures,morphotype,,,baseplate wedge protein,found in myoviral phages,RosiePosie_38 (AR),,,,42
+Tail Structure and assembly,,Myovirus Tail Structures,morphotype,,,tail sheath protein,found in myoviral phages,Alice_120 (C1),,,,43
+Tail Structure and assembly,,Myovirus Tail Structures,morphotype,,,tail needle protein,only assign to a podo- or myo-viral genome,,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2713385/,,,44
+Tail Structure and assembly,,Podovirus Tail Structures,morphotype,"Reference papers include Hrebik, 2019 (phage P68) and Xu, 2019 (phi29)",,lower collar protein,"12 copies. This structure has also been called adaptor in a manuscript describing the E.coli T7 phage (Chen, 2021). PDB Reference Structures: 6Q3G_4, 7EY9_3",PineapplePizza_11; Bouclier_14,,,,46
+Tail Structure and assembly,,Podovirus Tail Structures,morphotype,"Reference papers include Hrebik, 2019 (phage P68) and Xu, 2019 (phi29)",,pre-neck appendage protein,"12 copies of trimers (36 total proteins) comprise the full pre-neck appendage.  This structure has also been called tail fiber in some manuscripts (Hrebik, 2019; Chen, 2021). PDB Reference Structures: 6IAB, 7EY7_1",PineapplePizza_12; Bouclier_15,,,,47
+Tail Structure and assembly,,Podovirus Tail Structures,morphotype,"Reference papers include Hrebik, 2019 (phage P68) and Xu, 2019 (phi29)",,tail knob protein,"6 copies.  This protein has also been called nozzle protein (gp12) in a manuscript describing the E.coli T7 phage (Chen, 2021). PDB Reference Structures: 7EY7_2, 5FB4_C.",PineapplePizza_9; Bouclier_12,,,,48
+DNA Packaging,,,,,,"terminase, small subunit",As of 12-14-25. Small subunit should usually be found near the large subunit. If there is a second gene with hits to terminase small subunit (e.g. in the rignt arm in cluster AS phages) use small terminase-like protein.,Sisi_1 (F1),doi.org/10.1016/j.str.2012.05.014 doi.org/10.1016/j.virol.2015.01.015 doi:10.1016/j.virol.2010.12.046,,TerS,52
+DNA Packaging,,,,,,"terminase, large subunit","Use if terminase, small subunit is identified nearby",Sisi_2 (F1),doi:10.1016/j.virol.2010.12.046,,TerL,53
+DNA Packaging,,,,,,terminase,"If there are not two obvious large and small terminase genes in the same genome, assign the function ""terminase"".",TM4_4 (K2),doi:10.1016/j.virol.2010.12.046,,,54
+DNA Packaging,,,,,,"terminase, large subunit (ATPase domain)","Applicable to genomes in Clusters AY, AT, DT, and GD, where the functional domains of terminase are encoded by separate genes.",Auxilium_gp2 (AY),,,,55
+DNA Packaging,,,,,,"terminase, large subunit (nuclease domain)","Applicable to genomes in Clusters AY, AT, DT, and GD where the functional domains of terminase are encoded by separate genes.",Auxilium_gp3 (AY),,,,56
+DNA Packaging,,,,,,small terminase-like protein,"Use only for a second gene in the genome with strong homology to terminase, small subunit, (e.g. in the right arm of AS genomes) when there is already a terminase, small subunit gene in the canonical position near terminase, large subunit. (12-16-25)",Toad24_58 (AS1),,,terminase|small subunit,57
+DNA Packaging,,,,,,DNA packaging ATPase protein,for tectivirus  only,Badulia_12 (GE),,,,58
+DNA Packaging,,,,,,DNA terminal protein,for podovirus only,PineapplePizza_4 (GI),,,,59
+Host Cell Lysis,,,,,,lysin A,"Use for the main peptidoglycan-lysing protein, whether or not there is a lysin B identified in the genome. Lysin A often contains multiple domains (peptidase, amidase, peptidoglycan binding). If you only have one gene to call a lysin or endolysin, do not add a domain in the name.",Sisi_30 (F1),DOI: 10.1371/journal.pone.0034052,,LysA|endolysin A|endolysin,62
+Host Cell Lysis,,,,,,"lysin A, protease M15 domain",Use when the lysin A domains appear to be split into separate genes. Do not use if there is only one lysin A gene.,,,,endolysin|protease M15 domain,63
+Host Cell Lysis,,,,,,"lysin A, protease M23 domain",Use when the lysin A domains appear to be split into separate genes. Do not use if there is only one lysin A gene.,,,,endolysin|protease M23 domain,64
+Host Cell Lysis,,,,,,"lysin A, protease C39 domain",Use when the lysin A domains appear to be split into separate genes. Do not use if there is only one lysin A gene.,Arti_47 (CR2),,,endolysin|protease C39 domain,65
+Host Cell Lysis,,,,,,"lysin A, glycosyl hydrolase domain",Use when the lysin A domains appear to be split into separate genes. Do not use if there is only one lysin A gene.,Arti_48 (CR2),,,endolysin|glycosyl hydrolase domain,66
+Host Cell Lysis,,,,,,"lysin A, L-Ala-D-Glu peptidase domain",Use when the lysin A domains appear to be split into separate genes. Do not use if there is only one lysin A gene.,Agatha_20 (CT),,,endolysin|L-Ala-D-Glu peptidase domain,67
+Host Cell Lysis,,,,,,"lysin A, N-acetylmuramoyl-L-alanine amidase domain",Use when the lysin A domains appear to be split into separate genes. Do not use if there is only one lysin A gene.,,,,endolysin|N-acetylmuramoyl-L-alanine amidase domain,68
+Host Cell Lysis,,,,,,"lysin A, protease domain","Use when the lysin A domains appear to be split into separate genes, and the protease domain is not obviously M15, M23, or C39. Do not use if there is only one lysin A gene.",,,,,69
+Host Cell Lysis,,,,,,peptidoglycan hydrolase,a lysin-adjacent gene,,,,,70
+Host Cell Lysis,,,,,,lysin B,,Sisi_31 (F1),,,LysB|endolysin B,71
+Host Cell Lysis,,,,,,endolysin,"Use only if you have already called a lysin A in the genome and have a second lysin A-like gene in an odd place or if you have a lysin-like protein that does not match lysin A or B. (For a period of ~5 years, we changed the name lysin A to endolysin if there was no lysin B.  The current literature suggests that those proteins function like lysin A. If you hit a single gene that causes lysis in the cell, its function aligns with a lysin A.) New data is coming for LysP008, or LysC, and LysZ is in the literature, just havn't documented them in our dataset yet.",,,,,72
+Host Cell Lysis,,,,,,serine hydrolase,"lysin B has 2 domains, peptidoglycan binding domain and a serine hydrolase domain.  This protein only has the serine hydrolase domain",DekHockey33_70 (A15),,,,73
+Host Cell Lysis,,,,,,LysM-like peptidoglycan binding protein,"This is probably not an endolysin. If this is anything, it is a  peptidoglycan binding domain.  LysM is a domain with cell-wall hydrolases that cleave the peptidoglycan layer connecting daughter cells. In Mycobacterium tuberculosis, this process is governed by the predicted endopeptidase RipA. In the absence of this enzyme, the bacterium is unable to divide and exhibits an abnormal phenotype.",Quasimodo_97 (C1),,,LysM-like endolysin,74
+Host Cell Lysis,,,,,,holin,"Evidence needed to call a holin can include biochemical data (1), seqeunce similarity to genes with biochemical data (2), at least 2 transmembrane domains found and the gene is adjacent to the endolysins (3), conserved domain hits (4), and the abscence of additional transmembrane domains in the area.  The literature suggests that some phages have more than one holin, for now when we seem multiple possibilities for a holin gene, let's call them membrane proteins.",D29_11 (A2),,,,75
+Integration and lysogeny,,Integration and Excision,refinement,,,serine integrase,,Bxb1_35 (A1),,,,79
+Integration and lysogeny,,Integration and Excision,refinement,,,recombination directionality factor,"Look for this protein in phages with a serine integrase.  Will likely have HHPred hits to metallophophoesterase.  Look for HHpred hits to Bxb1_gp47, which was experimentally determined to be the RDF in Bxb1 (see cited manuscript).  Some mycobacteriophages are believed to be evolutionarily related to metallophosphoesterases but no longer function as enzymes or have only weak enzymatic activity.  It cannot be determined from the sequence alone whether your gene of interest has enzymatic activity.  Review the referenced papers for more information.",Bxb1_gp47 (A1),https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040186,https://pmc.ncbi.nlm.nih.gov/articles/PMC3273658/,RDF,80
+Integration and lysogeny,,Integration and Excision,refinement,,,serine homologous recombinase,,,,,,81
+Integration and lysogeny,,Integration and Excision,refinement,,,tyrosine integrase,,Sisi_43 (F1),,,tyrosine homologous recombinase,82
+Integration and lysogeny,,Integration and Excision,refinement,,,excise,"Do not call a protein excise unless you can identify a tyrosine integrase and the immunity repressor in the phage. A more general ""helix-turn-helix DNA binding protein"" might be more appropriate if you can't distinguish otherwise. Excision occurs differently in a phage with a serine recombinase.  Instead of excise (which it will not have), you may be able to find a RDF (recombination directionality factor) that does the same task. There is only one excise gene in a genome.",D29_36 (A2),,,Excisionase|Xis,83
+Integration and lysogeny,,DNA Partitioning Proteins,refinement,,,ParA-like dsDNA partitioning protein,"Found in some A cluster phages, but not all A sub-clusters",RedRock_37 (A2),https://pubmed.ncbi.nlm.nih.gov/27146086/,,,86
+Integration and lysogeny,,DNA Partitioning Proteins,refinement,,,ParB-like dsDNA partitioning protein,"Found in some A cluster phages, but not all A sub-clusters. Do not label anything ParB or having a ParB partitioning domain without the presence of a ParA partner in the genome.",RedRock_38 (A2),https://pubmed.ncbi.nlm.nih.gov/27146086/,,,87
+Integration and lysogeny,,DNA Partitioning Proteins,refinement,,,ParB N-terminal-like domain,does not have a ParA partner,Yotsuba_48 (JA),,,ParB-like nuclease domain,88
+Integration and lysogeny,,Regulation of the Lytic-Lysogenic Switch,refinement,,,immunity repressor,likely to have an HHPred match to C1 protein in lambda,Sisi_45 (F1),,,Repressor,91
+Integration and lysogeny,,Regulation of the Lytic-Lysogenic Switch,refinement,,,Imm-like superinfection immunity protein,this is a pfam hit to T4's superinfection immunity protein: significance was an e-value of 10e-14.,Niza_72 (A1),,,this is not this phage's immunity repressor,92
+Integration and lysogeny,,Regulation of the Lytic-Lysogenic Switch,refinement,,,hetero-immunity repressor,"to be used when there is a second immunity repressor that is NOT associated with the phage's own immunity casette. This assignment shares a pham with Cluster A immunity repressor.  However these phages are not in cluster A; so far we see this members in Clusters C, K, and F.","LRRHood_44 (C1), Rialto_43 (F1)",,https://seaphages.org/forums/topic/5583/?page=1#post-10410,immunity repressor (Cluster A),93
+Integration and lysogeny,,Regulation of the Lytic-Lysogenic Switch,refinement,,,Cro (control of repressor's operator),"Do not call a protein Cro unless you can identify the integrase and the immunity repressor in the phage.  Cro will be present with both the serine and tyrosine integrases.  When you have mutliple HTH hits in this region and cannot differentiate which one is the immunity repressor and which is the Cro, consider using the HTH designation.",Bubbles123_43 (F1),,,,94
+Integration and lysogeny,,Regulation of the Lytic-Lysogenic Switch,refinement,,,antirepressor,,Sisi_47 (F1),,,prophage antirepressor,95
+DNA Replication,,Replication Initiation and Elongation,refinement,,,RepA-like replication initiator,,Rachaly_36 (A2),,https://seaphagesbioinformatics.helpdocsonline.com/untitled-1575296464,,99
+DNA Replication,,Replication Initiation and Elongation,refinement,,,RepA-like helicase,,Sour_52 (DR),,,,100
+DNA Replication,,Replication Initiation and Elongation,refinement,,,DnaB-like dsDNA helicase,,RedRock_68 (A2),,,,101
+DNA Replication,,Replication Initiation and Elongation,refinement,,,"DnaB-like dsDNA helicase, N-terminus domain",this may also hit DNA organizer or loader,PaintedDog_67 (I1),,https://www.rcsb.org/structure/9OA1,,102
+DNA Replication,,Replication Initiation and Elongation,refinement,,,DnaC-like helicase loader,,Alice_189 (C1),,,,103
+DNA Replication,,Replication Initiation and Elongation,refinement,,,helicase loader,,Samman98_70 (CZ4),,https://seaphages.org/forums/topic/4700/,,104
+DNA Replication,,Replication Initiation and Elongation,refinement,,,DNA helicase,,Chah_54 (B1),,,ATP-dependent helicase,105
+DNA Replication,,Replication Initiation and Elongation,refinement,,,DNA helicase/methylase,,Auxilium_73 (AY),,,,106
+DNA Replication,,Replication Initiation and Elongation,refinement,,,helicase,,,,,,107
+DNA Replication,,DNA Polymerases & Processivity Factors,refinement,,,DNA polymerase I,,Luchador_50 (A14),,,,110
+DNA Replication,,DNA Polymerases & Processivity Factors,refinement,,,DNA polymerase,,,,,,111
+DNA Replication,,DNA Polymerases & Processivity Factors,refinement,,,DnaE-like DNA polymerase III (alpha),,Spud_203 (C1),,,,112
+DNA Replication,,DNA Polymerases & Processivity Factors,refinement,,,DnaQ-like (DNA polymerase III subunit),DNAQ is the exonuclease of Pol III (epsilon subunit),Sisi_35 (F1),,,,113
+DNA Replication,,DNA Polymerases & Processivity Factors,refinement,,,DNA polymerase III sliding clamp (Beta),,Ashwin_84 (O),,,,114
+DNA Replication,,Priming Enzymes,refinement,,,DNA primase,,Spud_199 (C1),,,,117
+DNA Replication,,Priming Enzymes,refinement,,,DNA primase/helicase,make sure it has both parts,Asta_33 (EA1),,,,118
+DNA Replication,,Priming Enzymes,refinement,,,DNA primase/polymerase,make sure it has both parts,,,,,119
+DNA Replication,,Priming Enzymes,refinement,,,DNA primase/polymerase/helicase,make sure it has all three parts,GreenHearts_47 (AK),,,,120
+DNA Replication,,DNA Topology and Ligation,refinement,,,DNA topoisomerase,,,,,,123
+DNA Replication,,DNA Topology and Ligation,refinement,,,DNA ligase,,Dewdrop_10 (GC),,,,124
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,RecA-like DNA recombinase,See Forum post to identify requirements,Spud_205 (C1),,https://seaphages.org/forums/topic/5567/,,128
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,ASCE ATPase,"If you don't recognize specificity, but you know you have an ATPase, use this term.",Apiary_64 (CR6),,https://seaphages.org/forums/topic/5567/,AAA ATPase|RecA superfamily ATPase.,129
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,RecE-like exonuclease,RecE-like exonucleases are most likely to be called when upstream of a RecT-like DNA pairing protein.,Babsiella_47 (I1),,,,130
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,RecB-like exonuclease/helicase,"If both a helicase and nuclease domain are present, the RecB label should be used.",,,,,131
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,Cas4 family exonuclease,"This family of exonucleases is similar to the exonuclease domain of RecB. The Cas4 label should be used if the gene includes only the exonuclease region. IF the gene also includes a helicase domain, the RecB label should be used. Cas4 family nucleases tend to have alignments to the crystal structure 4R5Q_A, 41C1_A  and to the PD-(D/E)XK nuclease superfamily (PF12705.7, among others).",BiteSize_54 (DG),,,,132
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,RecT-like DNA pairing protein,,Che9c_61 (I2),PMID: 11914131,,,133
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,ERF family DNA pairing protein,,,PMID: 11914131,,Erf,134
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,RAD52-like single-strand annealing protein,,Zhafia_54 EG),,,,135
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,DprA-like DNA processing chain A,,,,,,136
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,DprA-like ssDNA binding protein,,"CherryBlossom_70 (BI), SallyK_11",PMID 36695594,,,137
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,Ku-like dsDNA break-binding protein,,Ariel_208 (J),,,Ku,138
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,MRE11 double-strand break endo/exonuclease,,,,,,139
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,"dsDNA break-binding protein, AddA-like",,,,,,140
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,FtsK-like DNA translocase,,Ariel_205 (J),,,,141
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,SSB protein,,Rey_73 (M2),,,single stranded DNA binding protein|ssDNA binding protein,142
+DNA Recombination and Repair Proteins,,Homologous Recombination & Strand Exchange,refinement,,,nuclease,"Unless you can clearly identify the resides of a VRR-NUC domain, resort to a less specific call, such as nuclease",,,,VRR-Nuc domain protein,143
+DNA Recombination and Repair Proteins,,Resolvases & Nucleases for Recombination,refinement,,,RuvC-like resolvase,,Chah_6 (B1),,,,146
+DNA Recombination and Repair Proteins,,Resolvases & Nucleases for Recombination,refinement,,,RusA-like resolvase,,Spud_209 (C1),,,,147
+DNA Recombination and Repair Proteins,,Resolvases & Nucleases for Recombination,refinement,,,Holliday junction resolvase,"if not RusA or RuvC. Note that ""Holliday"" is capitalized (it is named after Robin Holliday)",,https://pubmed.ncbi.nlm.nih.gov/25183833/,https://seaphages.org/forums/topic/4380/,,148
+DNA Recombination and Repair Proteins,,Resolvases & Nucleases for Recombination,refinement,,,NucT-like nuclease,,Andrew_58 (AS3),,,,149
+DNA Recombination and Repair Proteins,,DNA End Processing & Modification,refinement,,,polynucleotide kinase,,Spud_250 (C1),,,pnk,152
+DNA Recombination and Repair Proteins,,DNA End Processing & Modification,refinement,,,nucleotidyl transferase,,Spud_3 (C!),,,,153
+DNA Recombination and Repair Proteins,,DNA End Processing & Modification,refinement,,,FIC domain nucleotidyl transferase,MUST contain HPFxxGNGR motif,Bradissa_34 (CY1),,https://seaphages.org/forums/topic/4443/,,154
+DNA Recombination and Repair Proteins,,RNA Ligases,refinement,,,RNA ligase,,Cjw1_92 (E),,,,157
+DNA Recombination and Repair Proteins,,RNA Ligases,refinement,,,rtcB-like RNA ligase,,Anaya_88 (K1),,,,158
+DNA Modification,,,,,,DNA methyltransferase,1-8-21 DNA methyltransferase and DNA mtehylase are equivalent terms.  We decided that DNA methyltransferase was a more informative term and more widely used.,,,,DNA methylase,161
+DNA Modification,,,,,,methyltransferase,,Optimus_14 (J),,,methylase,162
+DNA Modification,,,,,,methyltransferase with ParB N-terminal-like domain,"at present (7-5-22), this is an orpham.  It is big gene (becuase it contains the methyltransferase.  Do not confuse with the hits to the DNA binding portion of the ParB.",Evaa_2 (DR),,,,163
+DNA Modification,,,,,the following genes are part of a thymine hyper modification system: look for all parts before calling them:,ParB-N-terminal-like domain,,Wooper_1 (DR),,,,165
+DNA Modification,,,,,the following genes are part of a thymine hyper modification system: look for all parts before calling them:,Tet-like J-binding protein,,Wooper_2 (DR),,,,166
+DNA Modification,,,,,the following genes are part of a thymine hyper modification system: look for all parts before calling them:,aGPT-Pplase2 domain protein,,Wooper_3 (DR),,,,167
+DNA Modification,,,,,the following genes are part of a thymine hyper modification system: look for all parts before calling them:,5-hmU DNA kinase,,Wooper_4 (DR),,,,168
+DNA Modification,,,,,the following genes are part of a thymine hyper modification system: look for all parts before calling them:,Hypothetical Protein,"you may want to call this an oxidoreductase, but there is not enough evidence.  But we are on the look out for it.",Wooper_5 (DR),,,,169
+Gene Regulation and DNA-Associated Proteins,,General DNA binding,refinement,,,DNA binding protein,"If an HTH is identified, call it helix-turn-helix DNA binding domain. A misinterpretation of crystal structure chains lead to the mis-assignment of Zetzy1847 gene 42 as DNA directed RNA polymerase.",Caron_52 (EH),,,RNA polymerase sigma factor|DNA directed RNA polymerase,173
+Gene Regulation and DNA-Associated Proteins,,DNA-binding Domains,refinement,,,ribbon-helix-helix DNA binding domain,"Be cautious as you call this, use the forums to show the relevant data to support the call.  Check the start to make sure it is long enough to include the beta sheet at the beginning of the RHH. If the data do not support RHH, make the call a helix-turn-helix DNA binding domain for now.",TinyTerror_69 (B3),,https://seaphages.org/forums/topic/5437/,,176
+Gene Regulation and DNA-Associated Proteins,,DNA-binding Domains,refinement,,,"helix-turn-helix DNA binding domain, MerR-like","Be cautious as you call this, use the forums to show the relevant data to support the call.  if you cannot do that, make the call a helix-turn-helix DNA binding domain for now",,,https://seaphages.org/forums/topic/5320/,,177
+Gene Regulation and DNA-Associated Proteins,,DNA-binding Domains,refinement,,,helix-turn-helix DNA binding domain,"Be sure to check the alignments of your protein hitting HTHs, that they indeed hit 2-3 alpha helices in the seqence separated by small spacer (turn) regions of 3-4 amino acids.",,,https://seaphages.org/forums/topic/5842/,,178
+Gene Regulation and DNA-Associated Proteins,,DNA-binding Domains,refinement,,,hpothetical function or helix-turn-helix DNA binding domian,still trying figure out the feature needed to call it 'winged',Baine_24 (EE),,,winged helix-turn-helix DNA binding domain,179
+Gene Regulation and DNA-Associated Proteins,,DNA Structural and Architectural Proteins,refinement,,,Lsr2-like DNA bridging protein,,Courthouse_56 (J),,,Lsr2,182
+Gene Regulation and DNA-Associated Proteins,,DNA Structural and Architectural Proteins,refinement,,,"DNA binding, HU-like domain",,CMarky_12 (BH),,https://seaphages.org/forums/topic/4621/,,183
+Gene Regulation and DNA-Associated Proteins,,Transcriptional Regulators,refinement,,,WhiB family transcription factor,,Jasmine_32 (AV),,,,186
+Gene Regulation and DNA-Associated Proteins,,Transcriptional Regulators,refinement,,,ASC-1 transcription coactivator,,,,Link to the forum post: ASC 1 Activating signal cointegrator,ASC-1-like domain protein,187
+Gene Regulation and DNA-Associated Proteins,,Transcriptional Regulators,refinement,,,cyclic nucleotide sequestering protein,see forum post before calling this function,Wolfstar_30 (ED),,"for good info, examples about this function see forum post https://seaphages.org/forums/topic/5687/?page=1#post-11125",,188
+Gene Regulation and DNA-Associated Proteins,,Phage-specific Regulatory Factors,refinement,,,rIIA-like protein,rIIA-like protein and rIIB-like protein are found by using the UniProt-SwissProt-viral database at HHPred,Cross_217 (BE),"https://www.ias.ac.in/article/fulltext/reso/013/10/0898-0908, https://academic.oup.com/genetics/article-abstract/148/4/1539/6034650",https://seaphages.org/forums/topic/5157/,,191
+Gene Regulation and DNA-Associated Proteins,,Phage-specific Regulatory Factors,refinement,,,rIIB-like protein,,Cross_218 (BE),,,,192
+RNA Processing and Translation Machinery,,,,,,ribonuclease,,,,,RNase,195
+RNA Processing and Translation Machinery,,,,,,peptidyl tRNA hydrolase,,Ablatia_151 (C1),,,,196
+RNA Processing and Translation Machinery,,,,,,tRNA nucleotidyltransferase,,Phabba_32 (C2),,,,197
+RNA Processing and Translation Machinery,,,,,,tRNA-methyltransferase,,,,,,198
+RNA Processing and Translation Machinery,,,,,,RF-1 peptide chain release factor,,Spud_204 (C1),,,,199
+RNA Processing and Translation Machinery,,,,,,Ro-like RNA binding protein,,"Spud_226 (C1), Archie_55 (L2)",,,TROVE domain|Ro,200
+RNA Processing and Translation Machinery,,,,,,RNA binding protein,,EniyanLRS_128 (V),,,,201
+RNA Processing and Translation Machinery,,,,,,"ribosomal protein, bL12",Name has not been updated yet for example gene.,Commonplace_92 (JD),https://pubmed.ncbi.nlm.nih.gov/24524803/,see forum post https://seaphages.org/forums/topic/5791/?page=1#post-11503,ribosomal protein L7/L12|C terminus domain,202
+RNA Processing and Translation Machinery,,,,,,"ribosomal protein, uL24",,Riptide_156 (BE),https://pubmed.ncbi.nlm.nih.gov/24524803/,,,203
+Nucleotide Metabolism and Modification,,Nucleotide Biosynthesis and Salvage,refinement,,,ribonucleotide reductase,,RedRock_53 (A2),,,,207
+Nucleotide Metabolism and Modification,,Nucleotide Biosynthesis and Salvage,refinement,,,adenylate kinase,,Altwerkus_1 (B1),,,,208
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,pyrimidine deaminase,,,,,,211
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,nucleoside deaminase,,DaHudson_38 (A3),,,,212
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,deoxycytidylate deaminase,,Maco6_43 (AB),,,dCMP deaminase,213
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,ThyX-like thymidylate synthase,,RedRock_51 (A2),,,ThyX,214
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,thymidylate synthase,when you can't determine if it is ThyX or ThyA. See forum post for thymidylate synthase vs. dihydrofolate reductase,Muddy_46 (AB),,https://seaphages.org/forums/topic/4695/,,215
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,thymidylate kinase,,Erdmann_199 (C1),,,,216
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,dUTPase,,"Muddy_48 (AB), PinkFriday_50 (AK)",,,deoxyuridine triphosphatase,217
+Nucleotide Metabolism and Modification,,Pyrimidine metabolism,refinement,,,deoxynucleoside monophosphate kinase,,Aaronocolus_57 (BD),,,,218
+Nucleotide Metabolism and Modification,,Purine metabolism,refinement,,,"adenylosuccinate synthetase, PurA-like",,Ablatia_262 (C1),,,PurA,221
+Nucleotide Metabolism and Modification,,Purine metabolism,refinement,,,"adenylosuccinate lyase, PurB-like",,Frizzle_35 (DA),,,,222
+Nucleotide Metabolism and Modification,,Purine metabolism,refinement,,,adenylate kinase,,Adriana_1 (B1),,,,223
+Nucleotide Metabolism and Modification,,General or dual-pathway salvage,refinement,,,nucleoside deoxyribosyltransferase,,EniyanLRS_84 (V),,https://seaphages.org/forums/topic/5826/,,226
+Nucleotide Metabolism and Modification,,General or dual-pathway salvage,refinement,,,phosphoribosyl pyrophosphate transferase,,Rose5_72 (L),,,PRPP|ribose-phosphate pyrophosphokinase,227
+Nucleotide Metabolism and Modification,,General or dual-pathway salvage,refinement,,,phosphoribosyltransferase,,"Bosnia_40 (CZ1), Phelipe_64 (A4)",,,,228
+Nucleotide Metabolism and Modification,,General or dual-pathway salvage,refinement,,,5' nucleotidase,,Zooman_205 (GD),,,,229
+Nucleotide Metabolism and Modification,,General or dual-pathway salvage,refinement,,,adenylyltransferase,,PauloDiaboli_269 (GD),,,,230
+Nucleotide Metabolism and Modification,,Nucleotide Quality Control Enzymes,refinement,,,MazG-like nucleotide pyrophosphohydrolase,,Sbape_64 (A11),,,MazG,233
+Nucleotide Metabolism and Modification,,Nucleotide Quality Control Enzymes,refinement,,,MutT-like nucleotide pyrophosphohydrolase,,Kela_172 (BM),,,,234
+Nucleotide Metabolism and Modification,,Nucleotide Quality Control Enzymes,refinement,,,nucleotide pyrophosphohydrolase,if not MazG or MutT,,,,,235
+Nucleotide Metabolism and Modification,,Nucleotide Quality Control Enzymes,refinement,,,histidine triad nucleotide binding protein,,Ablatia_17 (C1),,,HIT domain,236
+Nucleotide Metabolism and Modification,,Thymidylate Synthesis Support Enzymes,refinement,,,dihydrofolate reductase,see forum post about ThyX vs dihydrofolate reductase,BubbaBear_56 (EB),,https://seaphages.org/forums/topic/4695/,,239
+Nucleotide Metabolism and Modification,,Thymidylate Synthesis Support Enzymes,refinement,,,folE-like GTP cyclohydrolase I,,Rosebush_6 (B1),see article: https://pubmed.ncbi.nlm.nih.gov/31784519/,See Case Study in BioInformatics Guide,GTP cyclohydrolase I,240
+Nucleotide Metabolism and Modification,,Modified Base Biosynthesis,refinement,,,dpdA-like tRNA-guanine transglycosylase,,"Kolhan_2 (B2), Orion_20",see article: https://pubmed.ncbi.nlm.nih.gov/31784519/,See Case Study in BioInformatics Guide,queuine tRNA-ribosyltransferase,243
+Nucleotide Metabolism and Modification,,Modified Base Biosynthesis,refinement,,,"PreQ0 pathway, queC-like",,Kolhan _3 (B2),see article: https://pubmed.ncbi.nlm.nih.gov/31784519/,See Case Study in BioInformatics Guide,,244
+Nucleotide Metabolism and Modification,,Modified Base Biosynthesis,refinement,,,"PreQ0 pathway, queD-like",,Kolhan_4 (B2),see article: https://pubmed.ncbi.nlm.nih.gov/31784519/,See Case Study in BioInformatics Guide,,245
+Nucleotide Metabolism and Modification,,Modified Base Biosynthesis,refinement,,,"PreQ0 pathway, queE-like",,Kolhan_5 (B2),see article: https://pubmed.ncbi.nlm.nih.gov/31784519/,See Case Study in BioInformatics Guide,,246
+Nucleotide Metabolism and Modification,,Modified Base Biosynthesis,refinement,,,"PreQ0 pathway, queF-like",,Funsized_2 (B9),see article: https://pubmed.ncbi.nlm.nih.gov/31784519/,See Case Study in BioInformatics Guide,7-cyano-7-deazaguanine reductase,247
+Nucleotide Metabolism and Modification,,Vitamin and Coenzyme-Related Proteins,refinement,,,nicotinate ribosyltransferase,,LeBron_72 (L1),,,,251
+Nucleotide Metabolism and Modification,,Vitamin and Coenzyme-Related Proteins,refinement,,,PnuC-like nicotinamide riboside transporter,,Zooman_229 (GD),,,,252
+Nucleotide Metabolism and Modification,,Vitamin and Coenzyme-Related Proteins,refinement,,,CobT-like cobalamin biosynthesis protein,,Camerico_92 (DF4),,,,253
+Nucleotide Metabolism and Modification,,Vitamin and Coenzyme-Related Proteins,refinement,,,S-adenosylmethionine synthetase,,MisoSoup_80 (singleton),,,,254
+Amino Acid & Nitrogen Metabolism,,,,,,aminotransferase,,Spud_193 (C1),,,,257
+Amino Acid & Nitrogen Metabolism,,,,,,glutamine amidotransferase domain,,ApoKipo_102 (AL),,,,258
+Amino Acid & Nitrogen Metabolism,,,,,,carboxylate amine ligase,,ApoKipo_101 (AL),,,,259
+Protein Processing Enzymes,,Protein Folding and Maturation Enzymes,refinement,,,aGPT-Pplase1 domain-containing protein,,Wooper_3 (DR),,,,263
+Protein Processing Enzymes,,"Proteases, Peptidases, and Associated Proteins",refinement,,,serine protease,,Shagrat_109 (CF),,,,266
+Protein Processing Enzymes,,"Proteases, Peptidases, and Associated Proteins",refinement,,,ClpP-like protease,,Cjw1_102 (E),,,Clp,267
+Protein Processing Enzymes,,"Proteases, Peptidases, and Associated Proteins",refinement,,,"Clp family protein, ATPase domain",,Myrna_251 (C2),,,,268
+Protein Processing Enzymes,,"Proteases, Peptidases, and Associated Proteins",refinement,,,peptidase,,,,,,269
+Protein Processing Enzymes,,"Proteases, Peptidases, and Associated Proteins",refinement,,,SprT-like protease,,Adephagia_74 (K1),,,,270
+Protein Processing Enzymes,,"Proteases, Peptidases, and Associated Proteins",refinement,,,cysteine protease,,Saguaro_69 (B7),,,,271
+Protein Processing Enzymes,,"Proteases, Peptidases, and Associated Proteins",refinement,,,metalloprotease,"Typically has HEXXH motif but other metalloprotease motifs (e.g. ""ExnHxHx7Sx2D)",Darrell_2 (A9),,,,272
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,phosphatase,,,,,,275
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,PTPc tyrosine phosphatase,,Bongo_83 (M1),,,PTPc,276
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,metallophosphoesterase,,InvictusManeo_34 (K5),,,metallophosphatase,277
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,purple acid phosphatase,,ArMaWen_46 (EK1),,,PAP,278
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,phosphoesterase,,D29_66 (A1),,https://seaphages.org/forums/topic/5557/,,279
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,serine/threonine kinase,,LittleE_16 (J),,,,280
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,kinase,,,,,,281
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,histidine kinase,,Shawty_53 (BB1),,,,282
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,acetyltransferase,,Hank144_76 (BD2),,,,283
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,ADP-ribosyltransferase,,Marky_10 (BM),,https://seaphages.org/forums/topic/4738/,Do not call the MuF-like part if that is part of the alignment,284
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,ADP-ribosyl glycohydrolase,,Settecandela_212 (AA),,,,285
+Protein Processing Enzymes,,Post-translational Modification Enzymes,refinement,,,NAD-dependent deacetylase,,Belfort_164 (BK1),,,,286
+Carbohydrate Metabolism and Modification,,Glycoside Hydrolases - Bond breaking,refinement,,,glycoside hydrolase,,,,,,290
+Carbohydrate Metabolism and Modification,,Glycoside Hydrolases - Bond breaking,refinement,,,glycosylase,,WhereRU_242 (BE2),,,,291
+Carbohydrate Metabolism and Modification,,Glycosyltransferases - Bond making,refinement,,,glycosyltransferase,,"Spud_232 (C1), Che8_109 (F1), Che8_110 (F1)",,,transglycosylase - this term in synonomous with glycosyltransferase. AI may dispute|but review by SMART is holding at this. 7/15/26.,294
+Carbohydrate Metabolism and Modification,,Glycosyltransferases - Bond making,refinement,,,glycosyltransferase/methylase,,Llama_108 (F1),,,,295
+Carbohydrate Metabolism and Modification,,Glycosyltransferases - Bond making,refinement,,,n-acetylglucosaminyltransferase,,,,,,296
+Carbohydrate Metabolism and Modification,,Glycosyltransferases - Bond making,refinement,,,galactosyltransferase,,,,,,297
+Carbohydrate Metabolism and Modification,,Other,refinement,,,O-acetyltransferase,"to call this, the N-terminus should contain an acyltransferase domain and the C-terminus should contain a SGNH domain.  it also has 9-11 transmembrane domains.",MrSmee_26 (FQ),https://www.sciencedirect.com/science/article/pii/S0021925817494105,https://seaphages.org/forums/topic/5183/,OatA|O-acetyltransferase domain protein|O-acetyltransferase A,300
+Carbohydrate Metabolism and Modification,,Other,refinement,,,O-methyltransferase,,Send513_63 (R),,,,301
+Carbohydrate Metabolism and Modification,,Other,refinement,,,glucosaminyl deacetylase,,Baee_4 (B5),,,,302
+Carbohydrate Metabolism and Modification,,Other,refinement,,,UDP-glucose dehydrogenase,,Metamorphoo_86 (EC),,,,303
+Lipid Metabolism and Lipid Associated Proteins,,Lipid Metabolism,refinement,,,lipoyl synthase,,Mufasa8_95 (FG),,,,307
+Lipid Metabolism and Lipid Associated Proteins,,Lipid Metabolism,refinement,,,"lipase, LipC-like",,Hillester_34 (AY),,,LipC|LipC-like lipase,308
+Lipid Metabolism and Lipid Associated Proteins,,Lipid Metabolism,refinement,,,esterase,,EvilGenious_65 (A2),,,,309
+Lipid Metabolism and Lipid Associated Proteins,,Lipid Metabolism,refinement,,,thioesterase,,,,,,310
+Lipid Metabolism and Lipid Associated Proteins,,Lipid Metabolism,refinement,,,carboxylesterase,,,,,,311
+Lipid Metabolism and Lipid Associated Proteins,,Lipid Associated,refinement,,,lipoprotein,,,,,,314
+Lipid Metabolism and Lipid Associated Proteins,,Lipid Associated,refinement,,,lipid binding protein,,,,,,315
+Stress Response and Programmed Cell Death Systems,,Toxins,refinement,,,toxin in toxin/antitoxin system,use only when the specific toxin/antitoxin system cannot be identified. Must have a toxin pair to call.,Moosehead_38 (CZ6),,,,320
+Stress Response and Programmed Cell Death Systems,,Toxins,refinement,,,"toxin in toxin/antitoxin system, RelE-like",,DosHalletts_41 (F1),,,,321
+Stress Response and Programmed Cell Death Systems,,Toxins,refinement,,,"toxin in toxin/antitoxin system, BrnT-like",,PhrostedPhlake_39 (CV),,https://seaphages.org/forums/topic/5189/,,322
+Stress Response and Programmed Cell Death Systems,,Toxins,refinement,,,"toxin in toxin/antitoxin system, HicA-like",,Xeno_30 (N),,,,323
+Stress Response and Programmed Cell Death Systems,,Toxins,refinement,,,"toxin, VapBC family toxin/antitoxin system",,,,,,324
+Stress Response and Programmed Cell Death Systems,,Antitoxins,refinement,,,antitoxin in toxin/antitoxin system,Use only when the specific toxin/antitoxin system cannot be identified. Must have a toxin pair to call.,Moosehead_39 (CZ6),,,,327
+Stress Response and Programmed Cell Death Systems,,Antitoxins,refinement,,,"antitoxin, VbhA-like",,,,,,328
+Stress Response and Programmed Cell Death Systems,,Antitoxins,refinement,,,"antitoxin in toxin/antitoxin system, RelB-like",,DosHalletts_42 (F1),,,,329
+Stress Response and Programmed Cell Death Systems,,Antitoxins,refinement,,,"antitoxin in toxin/antitoxin system, BrnA-like",,SoSeph_89 (K5),,,,330
+Stress Response and Programmed Cell Death Systems,,Antitoxins,refinement,,,"antitoxin in toxin/antitoxin system, HicB-like",,Melville_34 (F1),,,,331
+Stress Response and Programmed Cell Death Systems,,Antitoxins,refinement,,,"antitoxin, VapBC family toxin/antitoxin system",,,,,,332
+Stress Response and Programmed Cell Death Systems,,Abortive Infection (Abi) System Proteins,refinement,,,RexA family abortive infection protein,,Sidious_40 (CZ7),,https://seaphages.org/forums/topic/4892/,,335
+Stress Response and Programmed Cell Death Systems,,Abortive Infection (Abi) System Proteins,refinement,,,RexB family abortive infection protein,,Sidious_41 (CZ7),,https://seaphages.org/forums/topic/4892/,,336
+Stress Response and Programmed Cell Death Systems,,ADP-Ribosylating toxins (resemble eukaryotic virulence factors),refinement,,,VIP2-like ADP-ribosyltransferase toxin,,RedRock_2 (A2),,,,339
+Stress Response and Programmed Cell Death Systems,,Other,refinement,,,"chaperonin, DnaJ-like",,Myrna_190 (C2),,,,342
+Stress Response and Programmed Cell Death Systems,,Other,refinement,,,"ppGpp synthesis/degradation protein, SpoT-like",,"Phrann_29 (N), Quantum_122 (BM)",doi: 10.1038/nmicrobiol.2016.251,,,343
+Stress Response and Programmed Cell Death Systems,,Other,refinement,,,IrrE-like protein,"this protein has both a HTH and a metalloprotease domain (Typically has HEXXH motif but may have other metalloprotease motifs (e.g. ""ExnHxHx7Sx2D)","Finkle_47 (Sing), Birdsong_49 (DN)",,https://seaphages.org/forums/topic/5705/,,344
+Anti-Defense Systems,,,,,,"antirestriction protein, ArdA-like",,Airmid_82 (A5),,,,347
+Anti-Defense Systems,,,,,,"antirestriction protein, OCR-like",,Saftant_68 (BD3),,https://seaphages.org/forums/topic/4934/,,348
+Anti-Defense Systems,,,,,,tellurium resistance protein D family,,Fabian_75 (BF),,https://seaphages.org/forums/topic/4932/,,349
+Anti-Defense Systems,,,,,,host nuclease inhibitor,,Laroye_83 (AL),,,,350
+Anti-Defense Systems,,,,,,pentapeptide repeat protein,,Cjw1_58 (E),,,,351
+Anti-Defense Systems,,,,,,ESX-1 secretion-associated protein EspB,This protein is associated with the PEST toxin cassettes in M. abscessus prophages.,"Sbash_35, Stuck 39",,https://pmc.ncbi.nlm.nih.gov/articles/PMC8092301/,,352
+Anti-Defense Systems,,,,,,Imm 52 family protein,This protein is associated with the PEST toxin cassettes in M. abscessus prophages.,Stuck_40,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8092301/,,353
+Redox and Electron Transfer Enzymes,,Disulfide and Thiol-Redox Proteins,refinement,,,thioredoxin,,SarahRose_4 (BD1),,,,357
+Redox and Electron Transfer Enzymes,,Disulfide and Thiol-Redox Proteins,refinement,,,NrdH-like glutaredoxin,,Bxb1_56 (A1),,,NrdH,358
+Redox and Electron Transfer Enzymes,,Disulfide and Thiol-Redox Proteins,refinement,,,glutaredoxin,,Zaria_30 (L1),,,,359
+Redox and Electron Transfer Enzymes,,Electron Transfer and Reductases,refinement,,,NrdI-like flavodoxin,,PauloDiaboli_217 (GD),,,,362
+Redox and Electron Transfer Enzymes,,Electron Transfer and Reductases,refinement,,,PAPS reductase-like domain,,GMonster_84 (A1),,https://seaphages.org/forums/topic/4411/,,363
+Redox and Electron Transfer Enzymes,,Electron Transfer and Reductases,refinement,,,arsenate reductase,,Zeta1847_35 (EH),,,,364
+Redox and Electron Transfer Enzymes,,Electron Transfer and Reductases,refinement,,,FabG-like reductase,,Prager_66 (D1),,,,365
+Redox and Electron Transfer Enzymes,,Electron Transfer and Reductases,refinement,,,oxidoreductase,,Onyinye_78 (AE),,,,366
+Mobile Elements and Endonucleases,,,,,,HNH endonuclease,Must have H-N-H over a 30 aa span,"Sisi_99 (F1), Arianna_54 (EO)",,https://seaphages.org/forums/topic/5505/,,369
+Mobile Elements and Endonucleases,,,,,,G-I-Y Y-I-G endonuclease,,Akhila_87 (F1),,,,370
+Mobile Elements and Endonucleases,,,,,,LAGLIDADG endonuclease,,Eraser_30 (AZ1),,https://seaphages.org/forums/topic/5401/,,371
+Mobile Elements and Endonucleases,,,,,,endonuclease VII,,Bxb1_54 (A1),,,,372
+Mobile Elements and Endonucleases,,,,,,transposase,"If the hit of the transposase is a specific type, please ask if it is ok to add.",Moose_72 (A1),https://journals.asm.org/doi/pdf/10.1128/jb.173.24.7772-7780.1991,https://seaphages.org/forums/topic/4397/,,373
+Mobile Elements and Endonucleases,,,,,,mycobacteriophage mobile element 1 (MPME 1),,BPs_58 (G1),https://pmc.ncbi.nlm.nih.gov/articles/PMC2833263/,https://seaphages.org/forums/topic/4533/,,374
+Mobile Elements and Endonucleases,,,,,,mycobacteriophage mobile element 2 (MPME 2),,Brookers_79 (F1),https://pmc.ncbi.nlm.nih.gov/articles/PMC2833263/,https://seaphages.org/forums/topic/4533/,,375
+Membrane-associated and Transport Proteins,,,,,,membrane protein,should not override more specific functions that happen to contain membrane domains; Use DeepTMHMM to call membrane proteins.https://dtu.biolib.com/DeepTMHMM.,,,,,378
+Membrane-associated and Transport Proteins,,,,,,"membrane protein, Band-7-like",,Alice_24 (C1),,,,379
+Membrane-associated and Transport Proteins,,,,,,ATP binding cassette-like protein,,Fresco_2 (DR),,,,380
+Membrane-associated and Transport Proteins,,,,,,PE/PPE family protein,,Kayacho_88 (B6),,see forum post https://seaphages.org/forums/topic/5094/?page=1#post-8196,,381
+Membrane-associated and Transport Proteins,,,,,,phage membrane DNA delivery,"This is restricted to members of tectiviridae, like PRD1, that are phages that contain membranes.","Forthebois 22, 28 (BO)",,,,382
+GENERAL TERMS,,,,,It is OK to use the following general functional assignments if it is impossible to distinguish between specific instances,nuclease,,,,,,386
+GENERAL TERMS,,,,,It is OK to use the following general functional assignments if it is impossible to distinguish between specific instances,methylase,,,,,,387
+GENERAL TERMS,,,,,It is OK to use the following general functional assignments if it is impossible to distinguish between specific instances,hydrolase,,Goose_60 (A10),,,,388
+GENERAL TERMS,,,,,It is OK to use the following general functional assignments if it is impossible to distinguish between specific instances,protease,,,,,,389
+GENERAL TERMS,,,,,It is OK to use the following general functional assignments if it is impossible to distinguish between specific instances,exonuclease,,,,,,390
