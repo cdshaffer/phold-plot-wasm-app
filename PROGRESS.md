@@ -224,18 +224,25 @@ without starting claude.app or asking an agent to do it:
 
 ## Not yet built — next steps
 
-1. **`sea_category` → phold category-code mapping file.** Small, hand-curated,
-   rarely-changing table (unlike `approved_terms.csv`, which regenerates from
-   the live sheet). Seed from `catagory_cross_reference.csv`'s existing
-   mapping, fixing the `con`/`transcription` mismatches noted above.
-2. **A build/join step** producing the final `term → phold_category_code`
+1. **Still needs to be done: decide how sub-category-level mapping works.**
+   The mapping file needs both a category ↔ PHROG cross-reference *and* a
+   separate sub-category ↔ PHROG cross-reference — sub-categories shouldn't
+   always just inherit their parent category's PHROG mapping (e.g. "DNA
+   Partitioning Proteins," under the top-level "Integration and lysogeny"
+   category which correctly maps to `int`, is arguably a `dna`- or
+   `other`-type function itself, not integration/excision). Tabled for now;
+   revisit once the top-level category mapping is finalized.
+2. ~~`sea_category` → phold category-code mapping file.~~ **Done 2026-07-29**
+   — see "Category cross-reference rebuilt" below. `catagory_cross_reference.tsv`
+   now holds this directly (column C), so a separate mapping file isn't needed.
+3. **A build/join step** producing the final `term → phold_category_code`
    lookup artifact the WASM app actually consumes.
-3. **A diff/reconciliation script** for when the sheet changes again: compare
+4. **A diff/reconciliation script** for when the sheet changes again: compare
    a fresh `approved_terms.csv` against the last committed version, exact-match
    unchanged terms, propose (not auto-apply) renames via
    `deprecated_synonyms`, and flag brand-new or orphaned categories/terms for
    manual review.
-4. **Full vs. short category labels (new requirement, not yet implemented).**
+5. **Full vs. short category labels (new requirement, not yet implemented).**
    Every category needs both a "full" name (identical to the approved-terms
    list, any length) and a "short" name (≤20 characters) for tight graphical
    spaces (legends, small plot regions). `catagory_cross_reference.csv` column
@@ -243,7 +250,7 @@ without starting claude.app or asking an agent to do it:
    version — these need to be reconciled against the current 22-category list
    (names/order have already been confirmed to match closely; a few short
    names may need adding/renaming) rather than invented from scratch.
-5. **User-selectable display granularity in the final app (new requirement,
+6. **User-selectable display granularity in the final app (new requirement,
    not yet implemented).** The user wants students to be able to choose, at
    runtime, which category scheme the plot uses:
    - (a) the full 22 top-level SEA categories (maximum biological detail),
@@ -295,10 +302,28 @@ to be designed and checked for legibility/accessibility at 22 and 43 swatches
 SEA categories (already confirmed to match `approved_terms.csv` exactly),
 column 2 is a hand-picked short name for graphical use (≤20 chars, addresses
 the earlier "full vs. short label" requirement), column 3 is the user's own
-best-guess mapping to a PHROG/phold category. That mapping still has the
-`con`/`transcription` mismatches noted earlier in this doc to fix, and needs
-a fourth column added for the sub-category level (43 rows) once the top-level
-mapping is confirmed.
+best-guess mapping to a PHROG/phold category.
+
+Reviewed all 22 category → PHROG mappings against the app's real 10 buckets
+(2026-07-24/25). Result, currently being edited by the user directly in
+`sea_functions.xlsx` in the personal sibling folder (not yet ported back into
+`catagory_cross_reference.csv` in this repo):
+- **Fixed:** `Head-to-Tail Connector proteins` → `con` (was `head`).
+- **Fixed:** `Gene Regulation and DNA-Associated Proteins` → `transcription`
+  (was `dna`).
+- **Fixed:** `Amino Acid & Nitrogen Metabolism` → `moron` (was `dna`) — its
+  terms are auxiliary metabolic genes, not DNA/RNA/nucleotide metabolism.
+- **Fixed:** `Carbohydrate Metabolism and Modification` and `Lipid Metabolism
+  and Lipid Associated Proteins` → both `moron` (were `other`) — classic AMG
+  categories in phage biology; the original `other` mapping was just from not
+  being familiar with what "AMG" meant at the time, not a real category
+  disagreement.
+- **Deliberately left as-is:** `RNA Processing and Translation Machinery` →
+  stays `dna`, even though it's an imperfect fit. SEA-PHAGES bins RNA
+  processing and translation together as one category; PHROG doesn't have an
+  equivalent combined bucket. This isn't a fixable mismatch so much as the two
+  schemes drawing category boundaries in genuinely different places — no
+  clean 1:1 mapping exists here, so not worth forcing one.
 
 ## Starting point for the app phase: fork and run the unmodified baseline
 
@@ -318,6 +343,20 @@ built-in "Example" button, and confirmed via console logs and the DOM that
 Pyodide installed micropip/biopython/pycirclize and produced a real
 3440×4773px plot with a working download link. Baseline confirmed working on
 this Mac before touching any code.
+
+**Pushed 2026-07-24.** Committed the untracked files (`.gitignore`, `CLAUDE.md`,
+`PROGRESS.md`, `catagory_cross_reference.csv`, `data/approved_terms.csv`,
+`requirements.txt`, `scripts/`) as `02d2d5d "Add SEA-PHAGES approved-terms
+sync/parser"` and pushed to `origin/main` — live at
+[github.com/cdshaffer/phold-plot-wasm-app](https://github.com/cdshaffer/phold-plot-wasm-app).
+Authenticated via a classic PAT (`public_repo` scope only — deliberately not
+`workflow`/full `repo`, since nothing yet touches the Actions workflow file;
+a broader-scoped token can be minted later if/when that's needed) stored in
+macOS Keychain via `git config --global credential.helper osxkeychain`, so
+both the user and Claude Code can push without re-authenticating. (Tried
+`gh auth login` first, but `gh` itself insists on `repo`+`read:org`+`workflow`
+to function fully — unrelated to what plain `git push` needs — so skipped `gh`
+for this and used the credential helper directly instead.)
 
 Then merged: copied the fork's tracked files (`index.html`, `styles.css`,
 `README.md`, `data/NC_043029_phold_output.gbk`,
@@ -359,6 +398,48 @@ Before pushing anything public, cleaned up the project folder:
   `scripts/sync_approved_terms.py` fetches its own copies into the
   gitignored `data/raw/`).
 
+## Category cross-reference rebuilt (2026-07-29)
+
+Replaced the original `catagory_cross_reference.csv` with
+**`catagory_cross_reference.tsv`** — same 22 categories/short-names, but
+regenerated and restructured:
+
+- **Column A (SEA categories):** unchanged — already confirmed to match
+  `approved_terms.csv`'s 22 categories exactly, same names, same order.
+- **Column B (SEA Short names):** kept, with one typo fixed (`Mobilte
+  Elements` → `Mobile Elements`). All 22 verified ≤20 characters (longest are
+  `A.A & Nitrogen Met.` and `Membrane Associated`, both exactly 19).
+- **Column C, "Phrog/Phold category (code)":** the actual short key the app's
+  code uses (`head`, `con`, `tail`, `dna`, `moron`, `lysis`, `int`,
+  `transcription`, `other`) — updated with every correction agreed on
+  2026-07-24/25 (Head-to-Tail Connector→`con`, Gene Regulation→`transcription`,
+  Amino Acid & Nitrogen Metabolism→`moron`, Carbohydrate/Lipid Metabolism→
+  `moron`; RNA Processing and Translation Machinery deliberately left as `dna`
+  — see "What phold-plot-wasm-app actually uses" above for why).
+- **Column D:** repurposed from the always-empty "Phynteny Catagories" (never
+  populated, never discussed) to **"Phold legend label"** — the full
+  human-readable name matching phold's own legend (e.g. `Connector`, `Moron /
+  AMG / host takeover`), paired with column C's short code. This is a judgment
+  call on an ambiguous instruction ("redo the C and D columns with the current
+  mapping") — flagging in case a real Phynteny-category column is wanted
+  instead later.
+- **Column E (sea approved terms):** regenerated directly from
+  `data/approved_terms.csv` (not hand-typed) — every term belonging to that
+  category, comma-separated, in place of the original's inconsistent
+  space-separated blob with stray embedded commas.
+- **File format:** CSV → **TSV**. The outer format now uses tabs, so column
+  E's comma-separated term list (and individual terms that themselves contain
+  commas, e.g. `terminase, small subunit`) no longer conflicts with the
+  file's own delimiter.
+
+The original file was renamed to `catagory_cross_reference_historical.csv`
+and moved to `../SEAcircos-personal/` — kept for reference, but out of the
+repo since it's superseded.
+
+Mapping used verbatim from chat discussion, not re-derived from
+`sea_functions.xlsx` (the user's personal working copy in the same folder) —
+worth reconciling the two if they've since diverged.
+
 ## Key files
 
 | File | What it is |
@@ -366,7 +447,7 @@ Before pushing anything public, cleaned up the project folder:
 | `scripts/sync_approved_terms.py` | fetch + classify + align pipeline (done) |
 | `data/raw/sheet1.csv`, `data/raw/sheet1.pdf` | fetched source artifacts (regenerated by the script) |
 | `data/approved_terms.csv` | canonical normalized output (done) |
-| `catagory_cross_reference.csv` | old/stale category→phold mapping + short names; source for next step, needs updating (currently open/being edited in MacVim by the user) |
+| `catagory_cross_reference.tsv` | current category → phold-code cross-reference + short names (done 2026-07-29, see below) |
 | `requirements.txt` | pins `pymupdf` (only dependency beyond stdlib) |
 | `.gitignore` | excludes `.venv/`, `data/raw/`, OS/editor cruft, local Claude settings |
-| `../SEAcircos-personal/` (sibling folder, outside this repo) | `sea_functions.xlsx`, `personal_notes.md`, the Bioinformatics Technical Report, and the original manually-downloaded Sheet1 CSV/PDF — personal, not project deliverables |
+| `../SEAcircos-personal/` (sibling folder, outside this repo) | `sea_functions.xlsx`, `personal_notes.md`, the Bioinformatics Technical Report, the original manually-downloaded Sheet1 CSV/PDF, and `catagory_cross_reference_historical.csv` (the superseded first-attempt file) — personal/historical, not project deliverables |
